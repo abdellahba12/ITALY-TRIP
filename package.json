@@ -1,0 +1,12 @@
+{
+  "name": "trip-to-italy",
+  "version": "1.0.0",
+  "description": "Italy Trip Website - 3 Days Journey",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p $PORT"
+  },
+  "keywords": ["italy", "travel", "website"],
+  "author": "Lahcen benyoussef, Jaume Pallarols, David Torra, Abdellah Baghal",
+  "license": "ISC"
+}
