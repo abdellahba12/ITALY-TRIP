@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table - Trip to Italy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🇮🇹 Trip to Italy</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="itinerary.html">Itinerary</a></li>
+                <li><a href="timetable.html" class="active">Time Table</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Complete Time Table</h1>
+            <p>All transportation schedules and connections for your Italian journey</p>
+        </div>
+    </header>
+
+    <section class="timetable-section">
+        <div class="container">
+            <!-- Outbound Journey -->
+            <div class="schedule-card">
+                <h2 class="schedule-title">🚌 Outbound Journey - Day 1</h2>
+                <div class="schedule-date">Calaf → Barcelona → Rome</div>
+                
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Route</th>
+                            <th>Transport</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-cell">05:30</td>
+                            <td>
+                                <strong>Calaf (Main Bus Stop) → Barcelona Sants</strong>
+                                <span class="arrival">Arrival: 07:15</span>
+                            </td>
+                            <td>Hispano Igualadina/Alsa Bus</td>
+                            <td>1h 45min</td>
+                            <td class="price">€10-14</td>
+                        </tr>
+                        <tr>
+                            <td class="time-cell">07:25</td>
+                            <td>
+                                <strong>Barcelona Sants → El Prat Airport T2</strong>
+                                <span class="arrival">Arrival: 07:50</span>
+                            </td>
+                            <td>Rodalies R2 Nord Train</td>
+                            <td>25 min</td>
+                            <td class="price">€5.50</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td class="time-cell">09:30</td>
+                            <td>
+                                <strong>Barcelona → Rome Fiumicino (FCO)</strong>
+                                <span class="arrival">Arrival: 11:15</span>
+                            </td>
+                            <td>✈️ Flight</td>
+                            <td>1h 45min</td>
+                            <td class="price">€40-100</td>
+                        </tr>
+                        <tr>
+                            <td class="time-cell">11:30</td>
+                            <td>
+                                <strong>Fiumicino Airport → Rome Termini</strong>
+                                <span class="arrival">Arrival: 12:15</span>
+                            </td>
+                            <td>Leonardo Express Train</td>
+                            <td>32 min</td>
+                            <td class="price">€14</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Day 2 Transfer -->
+            <div class="schedule-card">
+                <h2 class="schedule-title">🚆 Day 2 Transfer</h2>
+                <div class="schedule-date">Rome → Venice</div>
+                
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Route</th>
+                            <th>Transport</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight-row">
+                            <td class="time-cell">07:30</td>
+                            <td>
+                                <strong>Rome Termini → Venice Santa Lucia</strong>
+                                <span class="arrival">Arrival: 11:15</span>
+                            </td>
+                            <td>🚄 Frecciarossa High-Speed Train</td>
+                            <td>3h 45min</td>
+                            <td class="price">€35-60</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Day 3 Transfer -->
+            <div class="schedule-card">
+                <h2 class="schedule-title">🚆 Day 3 Transfer</h2>
+                <div class="schedule-date">Venice → Milan</div>
+                
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Route</th>
+                            <th>Transport</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight-row">
+                            <td class="time-cell">08:00</td>
+                            <td>
+                                <strong>Venice Santa Lucia → Milano Centrale</strong>
+                                <span class="arrival">Arrival: 10:30</span>
+                            </td>
+                            <td>🚄 Frecciarossa High-Speed Train</td>
+                            <td>2h 30min</td>
+                            <td class="price">€25-45</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Return Journey -->
+            <div class="schedule-card">
+                <h2 class="schedule-title">✈️ Return Journey - Day 3</h2>
+                <div class="schedule-date">Milan → Barcelona → Calaf</div>
+                
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Route</th>
+                            <th>Transport</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-cell">18:45</td>
+                            <td>
+                                <strong>Milano Centrale → Malpensa Airport T1</strong>
+                                <span class="arrival">Arrival: 19:35</span>
+                            </td>
+                            <td>Malpensa Express Train</td>
+                            <td>50 min</td>
+                            <td class="price">€13</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td class="time-cell">21:00</td>
+                            <td>
+                                <strong>Milan Malpensa → Barcelona El Prat</strong>
+                                <span class="arrival">Arrival: 22:45</span>
+                            </td>
+                            <td>✈️ Flight</td>
+                            <td>1h 45min</td>
+                            <td class="price">€40-100</td>
+                        </tr>
+                        <tr>
+                            <td class="time-cell">23:15</td>
+                            <td>
+                                <strong>El Prat Airport → Barcelona Sants</strong>
+                                <span class="arrival">Arrival: 23:40</span>
+                            </td>
+                            <td>Rodalies R2 Train</td>
+                            <td>25 min</td>
+                            <td class="price">€5.50</td>
+                        </tr>
+                        <tr>
+                            <td class="time-cell">05:30*</td>
+                            <td>
+                                <strong>Barcelona Sants → Calaf</strong>
+                                <span class="arrival">*Next morning if no night bus</span>
+                            </td>
+                            <td>Hispano Igualadina/Alsa Bus</td>
+                            <td>1h 45min</td>
+                            <td class="price">€10-14</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Local Transport Info -->
+            <div class="transport-info">
+                <h2>🚊 Local Transportation Guide</h2>
+                <div class="transport-grid">
+                    <div class="transport-card">
+                        <h3>Rome</h3>
+                        <ul>
+                            <li><strong>Metro:</strong> Single ticket €1.50 (100 min)</li>
+                            <li><strong>24h Pass:</strong> €7</li>
+                            <li><strong>48h Pass:</strong> €12.50</li>
+                            <li><strong>Taxi to Trastevere:</strong> €15-20</li>
+                        </ul>
+                    </div>
+                    <div class="transport-card">
+                        <h3>Venice</h3>
+                        <ul>
+                            <li><strong>Vaporetto Single:</strong> €9.50 (75 min)</li>
+                            <li><strong>24h Pass:</strong> €25 (Recommended)</li>
+                            <li><strong>48h Pass:</strong> €35</li>
+                            <li><strong>Water Taxi:</strong> €60-120</li>
+                        </ul>
+                    </div>
+                    <div class="transport-card">
+                        <h3>Milan</h3>
+                        <ul>
+                            <li><strong>Metro:</strong> Single ticket €2.20</li>
+                            <li><strong>24h Pass:</strong> €7</li>
+                            <li><strong>Tram/Bus:</strong> Same as metro</li>
+                            <li><strong>Airport Express:</strong> €13</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Notes -->
+            <div class="notes-section">
+                <h2>📝 Important Travel Notes</h2>
+                <div class="notes-grid">
+                    <div class="note-item">
+                        <h4>✈️ Flight Bookings</h4>
+                        <p>Book flights 2-3 months in advance for best prices. Budget airlines like Ryanair and Vueling offer competitive rates.</p>
+                    </div>
+                    <div class="note-item">
+                        <h4>🚄 Train Reservations</h4>
+                        <p>High-speed trains require seat reservations. Book online at Trenitalia.com for discounts up to 60%.</p>
+                    </div>
+                    <div class="note-item">
+                        <h4>🎫 Attraction Tickets</h4>
+                        <p>The Last Supper requires advance booking (2-3 months). Book at cenacolovinciano.org.</p>
+                    </div>
+                    <div class="note-item">
+                        <h4>🧳 Luggage Tips</h4>
+                        <p>Pack light! You'll be moving between cities. Most hotels offer luggage storage after checkout.</p>
+                    </div>
+                    <div class="note-item">
+                        <h4>💳 Payment Methods</h4>
+                        <p>Cards widely accepted, but carry some cash for small vendors and public transport tickets.</p>
+                    </div>
+                    <div class="note-item">
+                        <h4>📱 Connectivity</h4>
+                        <p>EU roaming applies. Free WiFi available at most hotels, restaurants, and train stations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Reference -->
+            <div class="quick-reference">
+                <h2>⚡ Quick Reference</h2>
+                <div class="reference-grid">
+                    <div class="reference-item">
+                        <h4>Emergency Numbers</h4>
+                        <p>Police: 112 • Medical: 118 • Tourist Helpline: 039 039 039</p>
+                    </div>
+                    <div class="reference-item">
+                        <h4>Useful Apps</h4>
+                        <p>Trenitalia • Rome2Rio • Google Maps • Uber (Milan only)</p>
+                    </div>
+                    <div class="reference-item">
+                        <h4>Time Zones</h4>
+                        <p>Italy is GMT+1 (same as Spain) • No time adjustment needed</p>
+                    </div>
+                    <div class="reference-item">
+                        <h4>Weather (Spring/Fall)</h4>
+                        <p>Rome: 15-25°C • Venice: 12-22°C • Milan: 10-20°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p> Lahcen benyoussef, Jaume Pallarols, David Torra, Abdellah Baghal</p>
+        </div>
+    </footer>
+</body>
+</html>

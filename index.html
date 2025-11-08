@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip to Italy - Your Perfect 3-Day Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🇮🇹 Trip to Italy</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="itinerary.html">Itinerary</a></li>
+                <li><a href="timetable.html">Time Table</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Experience Italy in 3 Days</h1>
+            <p class="hero-subtitle">Rome → Venice → Milan</p>
+            <p class="hero-description">An unforgettable journey through Italy's most iconic cities</p>
+            <a href="itinerary.html" class="cta-button">View Full Itinerary</a>
+        </div>
+    </header>
+
+    <section class="overview">
+        <div class="container">
+            <h2>Your Italian Adventure Awaits</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🏛️</div>
+                    <h3>Day 1: Rome</h3>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚤</div>
+                    <h3>Day 2: Venice</h3>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⛪</div>
+                    <h3>Day 3: Milan</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-gallery">
+        <div class="container">
+            <h2>Discover Rome</h2>
+            <p class="section-subtitle">The Eternal City in all its glory</p>
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="rome1.jpg" alt="Rome Photo 1">
+                    <div class="slide-caption">Colosseum</div>
+                </div>
+                <div class="slide fade">
+                    <img src="rome2.jpg" alt="Rome Photo 2">
+                    <div class="slide-caption">Trevi Fountain</div>
+                </div>
+                <div class="slide fade">
+                    <img src="rome3.jpg" alt="Rome Photo 3">
+                    <div class="slide-caption">Vatican City</div>
+                </div>
+                <div class="slide fade">
+                    <img src="rome4.jpg" alt="Rome Photo 4">
+                    
+                </div>
+                <div class="slide fade">
+                    <img src="rome5.avif" alt="Rome Photo 5">
+                    
+                </div>
+                
+                <a class="prev" onclick="changeSlide(-1)">❮</a>
+                <a class="next" onclick="changeSlide(1)">❯</a>
+            </div>
+            
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 1;
+        let slideInterval;
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function changeSlide(n) {
+            clearInterval(slideInterval);
+            showSlides(slideIndex += n);
+            startAutoSlide();
+        }
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            showSlides(slideIndex = n);
+            startAutoSlide();
+        }
+
+        function autoSlide() {
+            slideIndex++;
+            showSlides(slideIndex);
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(autoSlide, 3000);
+        }
+
+        showSlides(slideIndex);
+        startAutoSlide();
+    </script>
+
+    <section class="highlights">
+        <div class="container">
+            <h2>Trip Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <span class="highlight-number">3</span>
+                    <span class="highlight-text">Iconic Cities</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-number">10+</span>
+                    <span class="highlight-text">Must-See Attractions</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-number">€700-850</span>
+                    <span class="highlight-text">Total Budget</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-number">72</span>
+                    <span class="highlight-text">Hours of Adventure</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="journey">
+        <div class="container">
+            <h2>Your Journey Path</h2>
+            <div class="journey-path">
+                <div class="journey-stop">
+                    <div class="stop-marker">📍</div>
+                    <h4>Calaf</h4>
+                    <p>Starting Point</p>
+                </div>
+                <div class="journey-line"></div>
+                <div class="journey-stop">
+                    <div class="stop-marker">✈️</div>
+                    <h4>Barcelona</h4>
+                    <p>Transit Hub</p>
+                </div>
+                <div class="journey-line"></div>
+                <div class="journey-stop">
+                    <div class="stop-marker">🏛️</div>
+                    <h4>Rome</h4>
+                    <p>Day 1</p>
+                </div>
+                <div class="journey-line"></div>
+                <div class="journey-stop">
+                    <div class="stop-marker">🚤</div>
+                    <h4>Venice</h4>
+                    <p>Day 2</p>
+                </div>
+                <div class="journey-line"></div>
+                <div class="journey-stop">
+                    <div class="stop-marker">⛪</div>
+                    <h4>Milan</h4>
+                    <p>Day 3</p>
+                </div>
+                <div class="journey-line"></div>
+                <div class="journey-stop">
+                    <div class="stop-marker">🏠</div>
+                    <h4>Back Home</h4>
+                    <p>Via Barcelona</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-gallery">
+        <div class="container">
+            <h2>Your Flight Routes Visualized</h2>
+            <p class="section-subtitle">Watch your journey unfold across the map of Europe</p>
+            <div class="video-grid">
+                <div class="video-card">
+                    <h3>✈️ Barcelona → Rome</h3>
+                    <div class="video-wrapper">
+                        <video controls poster="" loop>
+                            <source src="calaf.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p>Flight path: Barcelona El Prat to Rome Fiumicino</p>
+                    <div class="flight-info">
+                        <span>🕐 1h 45min</span>
+                        <span>📏 1,000 km</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>🚄 Rome → Venice</h3>
+                    <div class="video-wrapper">
+                        <video controls poster="" loop>
+                            <source src="venice_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p>High-speed train route through central Italy</p>
+                    <div class="flight-info">
+                        <span>🕐 3h 45min</span>
+                        <span>📏 525 km</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>🚄 Venice → Milan</h3>
+                    <div class="video-wrapper">
+                        <video controls poster="" loop>
+                            <source src="milan_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p>Scenic train journey across Northern Italy</p>
+                    <div class="flight-info">
+                        <span>🕐 2h 30min</span>
+                        <span>📏 280 km</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <h3>✈️ Milan → Barcelona</h3>
+                    <div class="video-wrapper">
+                        <video controls poster="" loop>
+                            <source src="milan-calaf.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p>Return flight: Milan Malpensa to Barcelona</p>
+                    <div class="flight-info">
+                        <span>🕐 1h 45min</span>
+                        <span>📏 950 km</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Italian Journey?</h2>
+            <p>Check out the detailed itinerary and timetable to plan your perfect trip</p>
+            <div class="cta-buttons">
+                <a href="itinerary.html" class="btn-primary">View Detailed Itinerary</a>
+                <a href="timetable.html" class="btn-secondary">Check Time Table</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Lahcen benyoussef, Jaume Pallarols, David Torra, Abdellah Baghal</p>
+        </div>
+    </footer>
+</body>
+</html>
